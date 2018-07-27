@@ -1,0 +1,162 @@
+/********************
+
+CSS INDEX
+
+01	Allgemeine HTML-Regeln
+	01.1 Standards
+
+02	Layout
+	02.1 Slider
+
+03	Mediaqueries
+	03.1 Mittlere Bildschirme
+	03.2 Kleine Bildschirme
+
+**********************/
+
+/* Importieren externer Daten/Fonts */
+
+
+
+/*
+01	Allgemeine HTML-Regeln
+***************************/
+
+/*	01.1 Standards */
+
+html {
+	background-color: #ffb3b3;
+}
+h1 {
+    font-family: helvetica, sans-serif;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+a {
+	text-decoration: none;
+}
+
+/*
+02	Layout
+***************************/
+
+/*	02.1 Slider */
+
+#carouselDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffe6e6;
+	width: 750px;
+	margin: auto;
+}
+#carouselNext {
+	margin-right: 1em;
+}
+#carouselPrev {
+	margin-left: 1em;
+}
+button {
+	font-size: 1.5em;
+	font-weight: bold;
+	border-radius: 5px;
+	border: none;
+	color: red;
+	background-color: transparent;
+}
+button:visited {
+	font-size: 1.5em;
+	font-weight: bold;
+	border-radius: 5px;
+	border: none;
+	color: white;
+}
+button:hover {
+	cursor: pointer;
+	color: red;
+	background-color: white;
+}
+button:active {
+	outline: none;
+	box-shadow: 1px 1px red;
+}
+button:focus {
+	outline: none;
+}
+figure {
+	height: 400px;
+	width: auto;
+	overflow: hidden;
+	display: inline-block; /* alle Elemente in einer Reihe */
+	vertical-align: middle; /* Buttons vertikal mittig ausgerichtet */
+	margin-left: 1em;
+	margin-right: 1em;
+}
+figure ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+img {
+	display: block; /* füllt Container komplett mit Bild */
+}
+
+/*
+03	Mediaqueries
+***************************/
+
+/*	03.1 Mittlere Bildschirme */
+
+@media screen and (max-width: 768px) {
+	h1 {
+    	font-size: 2.25em;
+	}
+	figure {
+		margin: 0.3em;
+	}
+	img {
+		height: 280px;
+		width: auto;
+	}
+	button {
+		font-size: 0.875em;
+	}
+	button:active {
+		text-shadow: 1px 1px white;
+		box-shadow: none;
+	}
+	#carouselDiv {
+		width: 420px;
+	}	
+}
+
+/*	03.2 Kleine Bildschirme */
+
+@media screen and (max-width: 420px) {
+	h1 {
+    	font-size: 2em;
+	}
+	figure {
+		margin: 0.2em;
+	}
+	img {
+		height: 200px;
+		width: auto;
+	}
+	button {
+		font-size: 0.7em;
+		padding: 0;
+		margin: 0.3em;
+		color: red;
+	}
+	button:active {
+		text-shadow: 1px 1px white;
+		box-shadow: none;
+	}
+	#carouselDiv {
+		width: 320px;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}	
+}
